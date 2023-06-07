@@ -1,0 +1,867 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "42004e94",
+   "metadata": {},
+   "source": [
+    "<h1> Question 1 </h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dd4a7c28",
+   "metadata": {},
+   "source": [
+    "<h4>What data type is each of the following? </h4>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ca610bd1",
+   "metadata": {},
+   "source": [
+    "<h3>5\tIntegers\n",
+    "5.0\t======= Float <br>\n",
+    "5 > 1\t=== Boolean (true) <br>\n",
+    "‘5’ =======\tString <br>\n",
+    "'5' * 2 ===\tInteger (10)  <br>\n",
+    "‘5’+’2’====\tString (‘55’) <br>\n",
+    "5/2 =======\tfloat (2.5)   <br>\n",
+    "5 % 2======\tInteger       <br>\n",
+    "{5,2,1}====\tList          <br>\n",
+    "5==3 ====== boolean       <br>\n",
+    "Pi (the number) ===\tFloat </h3>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "51c5aaa0",
+   "metadata": {},
+   "source": [
+    "<h1> Question 2 </h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "650e45df",
+   "metadata": {},
+   "source": [
+    "\n",
+    "<h4> Write (and evaluate) C# expressions that answer these questions: </h4>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "155cb334",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#a. How many letters are there in 'Supercalifragilisticexpialidocious'?\n",
+    "\n",
+    "namespace PS1\n",
+    "{\n",
+    "    class Question2a   #difining a class \n",
+    "    {\n",
+    "        static void Main(string[] args)\n",
+    "        {\n",
+    "            string word = \"Supercalifragilisticexpialidocious\";   # Difinig string\n",
+    "            int Len = word.Length;                                # converting the String into integer\n",
+    "            Console.WriteLine(\"The length of the word is:\" +Len);  # Printing the Length of String \n",
+    "        }\n",
+    "\n",
+    "    }\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5ce5ae06",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#b. Does 'Supercalifragilisticexpialidocious' contain 'ice' as a substring?\n",
+    "\n",
+    "namespace PS1\n",
+    "{\n",
+    "    class Question2b\n",
+    "    {\n",
+    "        public static void Main(string[] args)\n",
+    "        {\n",
+    "            string word = \"Supercalifragilisticexpialidocious\";    # Difining string\n",
+    "            bool check = word.Contains(\"ice\");                     # Finding word \"ice\" in the string\n",
+    "            Console.WriteLine(check);\n",
+    "            Console.ReadLine();\n",
+    "        }\n",
+    "    }\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a4a3be39",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#c. Which of the following words is the longest:\n",
+    "# Supercalifragilisticexpialidocious, Honorificabilitudinitatibus, or Bababadalgharaghtakamminarronnkonn?\n",
+    "\n",
+    "namespace PS1\n",
+    "{\n",
+    "    class Question2c\n",
+    "    {\n",
+    "        public static void Main(string[] args)\n",
+    "        {\n",
+    "            string str1 = \"Supercalifragilisticexpialidocious\";\n",
+    "            string str2 = \"Honorificabilitudinitatibus\";\n",
+    "            string str3 = \"Bababadalgharaghtakamminarronnkonn\";   # difing the strings \n",
+    "            int max =0;    \n",
+    "            int count = 0; \n",
+    "            string[] str = {str1, str2, str3};\n",
+    "            foreach (string str in strings)\n",
+    "            {\n",
+    "                if(str.Length > maximum)   # Finding the longest string amoung all\n",
+    "                {\n",
+    "                    maximum = str.Length;  \n",
+    "                }\n",
+    "            }\n",
+    "\n",
+    "            foreach(string str in strings) # Evaluating all the 3 strings whether there is any string similar to the maximum length string.\n",
+    "            {\n",
+    "                if(str.Length == max)\n",
+    "                {\n",
+    "                    Console.WriteLine($\"{str} is the longest with length {max}\");\n",
+    "                    count ++;\n",
+    "                } \n",
+    "            }\n",
+    "            Console.WriteLine($\"There are a total of {count} string with length {max}\"); # finding count of maximum length strings.\n",
+    "            Console.WirteLine(\"Longest word amoung all the words is : \" + longestWord); # Print the longest string.\n",
+    "        }   \n",
+    "    }\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "422258b8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#d. Which composer comes first in the dictionary: 'Berlioz', 'Borodin', 'Brian',\n",
+    "#. 'Bartok', 'Bellini', 'Buxtehude', 'Bernstein'. Which one comes last?\n",
+    "\n",
+    "namespace PS1\n",
+    "{\n",
+    "    static void Main(string[] args)\n",
+    "    {\n",
+    "        class Question2d\n",
+    "        {\n",
+    "            String[] str = { \"Berlioz\",\"Borodin\", \"Brian\",\"Bartok\", \"Bellini\", \"Buxtehude\", \"Bernstein\"};\n",
+    "            String fstr = str[0];                     # first string of the list \n",
+    "            String lstr = str[str.Length - 1];        # last string of the list\n",
+    "            Array.Sort(str);                          # rearranging of list \n",
+    "            \n",
+    "            Console.WriteLine(\"the fisrt word is :\" +fstr + \"\\nthe Last word is :\" +lstr); # printing the first and last string\n",
+    "            \n",
+    "        }\n",
+    "    }\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "19883049",
+   "metadata": {},
+   "source": [
+    "<h1> Question 3</h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e1cf8b9f",
+   "metadata": {},
+   "source": [
+    "<h4>Implement function triangleArea(a,b,c) that takes as input the lengths of the 3 sides of a triangle and returns the area of the triangle. By Heron's formula, the area of a triangle with side lengths a, b, and c is   s(s − a)(s − b)(s − c), where\n",
+    "s = (a + b + c)/2.\n",
+    ">>> triangleArea(2,2,2)\n",
+    "1. 7320508075688772 </h4>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "555b01b6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "public class Triarea\n",
+    "    {\n",
+    "        public static double TriangleArea(double S1, double S2, double S3) \n",
+    "            {\n",
+    "                double sides = (S1 + S2 + S3) / 2;        # using the formula \n",
+    "                double area = Math.Sqrt(sides * (sides - S1) * (sides - S2) * (sides - S3));\n",
+    "                return area;    # calculating the area of the triangle\n",
+    "            }\n",
+    "        \n",
+    "        public static void Main(string[] args) \n",
+    "            {\n",
+    "                double area = TriangleArea(2, 2, 2);    #Calculating the area of traingle with sides 2,2,2.\n",
+    "                Console.WriteLine(\"The area of the trinagle is :\" + area); # Printing the area of triangle with sides 2,2,2.\n",
+    "            }\n",
+    "    }"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "24337423",
+   "metadata": {},
+   "source": [
+    "<h3>#OUTPUT: \n",
+    "TriangleArea(2,2,2): 1.7320508075</h3>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "29659a4a",
+   "metadata": {},
+   "source": [
+    "<h1> Question 4 </h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "76f1ea27",
+   "metadata": {},
+   "source": [
+    "<h4> Write a program in C# Sharp to separate odd and even integers in separate arrays. </h4>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3bb0ad8b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "\n",
+    "class Question4\n",
+    "{\n",
+    "    static void Main()\n",
+    "    {\n",
+    "        int[] num = { 54, 55, 56, 57, 31, 45, 32, 98, 69, 100 }; # assigning the value of the array \n",
+    "        int[] eNum = new int[num.Length];    # defining the even number within the array\n",
+    "        int[] oNum = new int[num.Length];    #defining the odd number within the array\n",
+    "        int eCount = 0;\n",
+    "        int oCount = 0;\n",
+    "\n",
+    " \n",
+    "\n",
+    "        foreach (int number in num)\n",
+    "        {\n",
+    "            if (number % 2 == 0)        # finding the even number from the array\n",
+    "            {\n",
+    "                eNum[eCount] = number;\n",
+    "                eCount++;\n",
+    "            }\n",
+    "            else                        # finding the odd numbers from the array\n",
+    "            {\n",
+    "                oNum[oCount] = number;\n",
+    "                oCount++;\n",
+    "            }\n",
+    "        }\n",
+    "\n",
+    " \n",
+    "\n",
+    "        Console.WriteLine(\"The Even Numbers are :\");\n",
+    "        for (int i = 0; i < eCount; i++)\n",
+    "        {\n",
+    "            Console.WriteLine(eNum[i]);   # Printing the even number\n",
+    "        } \n",
+    "\n",
+    " \n",
+    "\n",
+    "        Console.WriteLine(\"The Odd Numbers are :\");\n",
+    "        for (int i = 0; i < oCount; i++)\n",
+    "        {\n",
+    "            Console.WriteLine(oNum[i]);    # printing the odd number from the array \n",
+    "        }\n",
+    "    }\n",
+    "}\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4a37eb27",
+   "metadata": {},
+   "source": [
+    "<h3># output \n",
+    "The even numbers are:\n",
+    "54\n",
+    "56\n",
+    "32\n",
+    "98\n",
+    "100\n",
+    "\n",
+    "The odd numbers are:\n",
+    "55\n",
+    "57\n",
+    "31\n",
+    "45\n",
+    "69\n",
+    "</h3>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "de537edb",
+   "metadata": {},
+   "source": [
+    "<h1> Question 5 </h1>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2a49b957",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "using System;\n",
+    "\n",
+    "public class Rectangle\n",
+    "{\n",
+    "     Static bool Inside(double x, double y, double x1, double y1, double x2, double y2)  # defining the booleans\n",
+    "    {\n",
+    "    // Check if the point (x, y) lies inside the rectangle\n",
+    "        if (x >= x1 && x <= x2 && y >= y1 && y <= y2)          # applying the condition to find the trueor false.\n",
+    "        {\n",
+    "            // Return true if the point is inside the rectangle\n",
+    "            return true;                                        # it will return true if the (x,y) lies within the triangle\n",
+    "         }\n",
+    "        else\n",
+    "        {\n",
+    "            // Return true if the point is outside the rectangle\n",
+    "            return false;                                        #it will return true if the (x,y) lies within the triangle\n",
+    "        }\n",
+    "    }\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6ffeb315",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# a. Write a function inside(x,y,x1,y1,x2,y2) that returns True or False depending on whether the point (x,y) lies in the rectangle with lower left corner (x1,y1) and upper right corner (x2,y2).\n",
+    "\n",
+    "Inside(1,1,0,0,2,3);\n",
+    "Inside(-1,-1,0,0,2,3);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9fd680c5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#b. Use function inside()from part a. to write an expression that tests whether the point (1,1) lies in both of the following rectangles: one with lower left corner (0.3, 0.5) and upper right corner (1.1, 0.7) and the other with lower left corner (0.5, 0.2) and upper right corner (1.1, 2).\n",
+    "\n",
+    "bool CheckBothRectangle(double x, double y)\n",
+    "{\n",
+    "    bool isInsideRectangle1 = inside(x, y, 0.3, 0.5, 1.1, 0.7);\n",
+    "    bool isInsideRectangle2 = inside(x, y, 0.5, 0.2, 1.1, 2);\n",
+    "    return isInsideRectangle1 && isInsideRectangle2;\n",
+    "    \n",
+    "}\n",
+    "\n",
+    "CheckBothRectangle(1,1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "259dffac",
+   "metadata": {},
+   "source": [
+    "<h1> Question 6 </h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d08fa8c2",
+   "metadata": {},
+   "source": [
+    "<h4> # You can turn a word into pig-Latin using the following two rules(simplified):If the word starts with a consonant, move that letter to the end and append 'ay'. For example, 'happy' becomes 'appyhay' and 'pencil' becomes 'encilpay'.If the word starts with a vowel, simply append 'way' to the end of the word. For example, 'enter' becomes 'enterway' and 'other' becomes 'otherway' . For our purposes, there are 5 vowels: a, e, i, o, u (so we count y as a consonant). Write a function pig() that takes a word (i.e., a string) as input and returns its pig- Latin form. Your function should still work if the input word contains upper case characters. Your output should always be lower case however.\n",
+    "\n",
+    "</h4>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "f51e11a7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def pig(word):\n",
+    "    vowels = ['a', 'e', 'i', 'o', 'u']\n",
+    "    word = word.lower()  # Converting to lowercase\n",
+    "    \n",
+    "    if word[0] in vowels:\n",
+    "      \n",
+    "        pig_latin = word + 'way'\n",
+    "    else:\n",
+    "        \n",
+    "        pig_latin = word[1:] + word[0] + 'ay'\n",
+    "        \n",
+    "    return pig_latin\n",
+    "    \n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "819664b0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "appyhay\n"
+     ]
+    }
+   ],
+   "source": [
+    "input_word = 'happy'\n",
+    "pig_latin_word = pig(input_word)\n",
+    "print(pig_latin_word) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "125f90a8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "enterway\n"
+     ]
+    }
+   ],
+   "source": [
+    "input_word = 'Enter'\n",
+    "pig_latin_word = pig(input_word)\n",
+    "print(pig_latin_word)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8f236f6a",
+   "metadata": {},
+   "source": [
+    "<h1> Question 7 </h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5f0a17ee",
+   "metadata": {},
+   "source": [
+    "<h4>File bloodtype1.txt records blood-types of patients (A, B, AB, O or OO) at a clinic. Write a function bldcount() that reads the file with name name and reports (i.e., prints) how many patients there are in each bloodtype.\n",
+    "#>>> bldcount('bloodtype.txt')\n",
+    "#There are 10 patients of blood type A. There is one patient of blood type B. There are 10 patients of blood type AB. There are 12 patients of blood type O. There are no patients of blood type OO. </h4>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "60fc6b1a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "def bcount(fname):\n",
+    "   \n",
+    "    bcounts = {\n",
+    "        'A': 0,\n",
+    "        'B': 0,\n",
+    "        'AB': 0,\n",
+    "        'O': 0,\n",
+    "        'OO': 0\n",
+    "    }\n",
+    "\n",
+    "   \n",
+    "    with open(fname, 'r') as file:\n",
+    "        data = file.read().split()\n",
+    "        for b_type in data:\n",
+    "            \n",
+    "            bcounts[b_type] += 1\n",
+    "\n",
+    "   \n",
+    "    for b_type, count in bcounts.items():\n",
+    "        print(f\"Blood type {b_type}: {count} patients\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "e5063402",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Blood type A: 15 patients\n",
+      "Blood type B: 1 patients\n",
+      "Blood type AB: 13 patients\n",
+      "Blood type O: 15 patients\n",
+      "Blood type OO: 0 patients\n"
+     ]
+    }
+   ],
+   "source": [
+    "bcount('bloodtype1.txt')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "355db478",
+   "metadata": {},
+   "source": [
+    "<h1> Question 8 </h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ec16707a",
+   "metadata": {},
+   "source": [
+    "<h4>Write a function curconv() that takes as input:\n",
+    "1. a currency represented using a string (e.g., 'JPY' for the Japanese Yen or 'EUR' for the Euro)\n",
+    "2. an amount\n",
+    "and then converts and returns the amount in US dollars.\n",
+    ">>> curconv('EUR', 100) 122. 96544\n",
+    ">>> curconv('JPY', 100) 1. 241401\n",
+    "The currency rates you will need are stored in file currencies.txt:\n",
+    "AUD 1.0345157 Australian Dollar CHF 1.0237414 Swiss Franc\n",
+    "CNY 0. 1550176 Chi nese Yuan  </h4>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "44039bb0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def curconv(currency, amnt):\n",
+    "    c_rates = {}\n",
+    "    with open('currencies.txt', 'r') as file:\n",
+    "        for line in file:\n",
+    "            parts = line.split() \n",
+    "            c_rates[parts[0]] = float(parts[1])\n",
+    "    if currency in c_rates:\n",
+    "        usd_amnt = amnt * c_rates[currency]\n",
+    "        return usd_amnt\n",
+    "    else:  \n",
+    "        return \"Currency not found in conversion rates.\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "6d6912ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1.241401\n"
+     ]
+    }
+   ],
+   "source": [
+    "c_amnt = curconv('JPY', 100)\n",
+    "print(c_amnt)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "f093ee0d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "122.96544\n"
+     ]
+    }
+   ],
+   "source": [
+    "c_amnt = curconv('EUR', 100)\n",
+    "print(c_amnt)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b9d84718",
+   "metadata": {},
+   "source": [
+    "<h1> Question 9</h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "619391b2",
+   "metadata": {},
+   "source": [
+    "\n",
+    "<h4>  Each of the following will cause an exception (an error). Identify what type of exception each will cause.</h4>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "355b061d",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "unsupported operand type(s) for +: 'int' and 'str'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[1], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[38;5;241;43m6\u001b[39;49m\u001b[43m \u001b[49m\u001b[38;5;241;43m+\u001b[39;49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43ma\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\n",
+      "\u001b[0;31mTypeError\u001b[0m: unsupported operand type(s) for +: 'int' and 'str'"
+     ]
+    }
+   ],
+   "source": [
+    "6 + 'a'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "8e4db95e",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "IndexError",
+     "evalue": "list index out of range",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[2], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m my_list \u001b[38;5;241m=\u001b[39m [\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m2\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m4\u001b[39m, \u001b[38;5;241m5\u001b[39m, \u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m7\u001b[39m, \u001b[38;5;241m8\u001b[39m, \u001b[38;5;241m9\u001b[39m, \u001b[38;5;241m10\u001b[39m]\n\u001b[0;32m----> 2\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[43mmy_list\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;241;43m11\u001b[39;49m\u001b[43m]\u001b[49m)\n",
+      "\u001b[0;31mIndexError\u001b[0m: list index out of range"
+     ]
+    }
+   ],
+   "source": [
+    "my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+    "print(my_list[11])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "8205c6b4",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ValueError",
+     "evalue": "math domain error",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[3], line 3\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;28;01mimport\u001b[39;00m \u001b[38;5;21;01mmath\u001b[39;00m\n\u001b[0;32m----> 3\u001b[0m result \u001b[38;5;241m=\u001b[39m \u001b[43mmath\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43msqrt\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m-\u001b[39;49m\u001b[38;5;241;43m1.0\u001b[39;49m\u001b[43m)\u001b[49m\n",
+      "\u001b[0;31mValueError\u001b[0m: math domain error"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "result = math.sqrt(-1.0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "6b571c1d",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'x' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[4], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[43mx\u001b[49m)\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'x' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "7321c3a1",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "FileNotFoundError",
+     "evalue": "[Errno 2] No such file or directory: 'mayankkhosla.txt'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mFileNotFoundError\u001b[0m                         Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[5], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;66;03m# Read the file\u001b[39;00m\n\u001b[0;32m----> 2\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m \u001b[38;5;28;43mopen\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mmayankkhosla.txt\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mr\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m)\u001b[49m \u001b[38;5;28;01mas\u001b[39;00m file:\n\u001b[1;32m      3\u001b[0m     file_contents \u001b[38;5;241m=\u001b[39m file\u001b[38;5;241m.\u001b[39mread()\n\u001b[1;32m      5\u001b[0m \u001b[38;5;66;03m# Print the file contents\u001b[39;00m\n",
+      "File \u001b[0;32m~/anaconda3/lib/python3.10/site-packages/IPython/core/interactiveshell.py:282\u001b[0m, in \u001b[0;36m_modified_open\u001b[0;34m(file, *args, **kwargs)\u001b[0m\n\u001b[1;32m    275\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m file \u001b[38;5;129;01min\u001b[39;00m {\u001b[38;5;241m0\u001b[39m, \u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m2\u001b[39m}:\n\u001b[1;32m    276\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mValueError\u001b[39;00m(\n\u001b[1;32m    277\u001b[0m         \u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mIPython won\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mt let you open fd=\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mfile\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m by default \u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    278\u001b[0m         \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mas it is likely to crash IPython. If you know what you are doing, \u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    279\u001b[0m         \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124myou can use builtins\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124m open.\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    280\u001b[0m     )\n\u001b[0;32m--> 282\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mio_open\u001b[49m\u001b[43m(\u001b[49m\u001b[43mfile\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43margs\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n",
+      "\u001b[0;31mFileNotFoundError\u001b[0m: [Errno 2] No such file or directory: 'mayankkhosla.txt'"
+     ]
+    }
+   ],
+   "source": [
+    "# Read the file\n",
+    "with open('mayankkhosla.txt', 'r') as file:\n",
+    "    file_contents = file.read()\n",
+    "\n",
+    "# Print the file contents\n",
+    "print(file_contents)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ad40b715",
+   "metadata": {},
+   "source": [
+    "<h1> Question 10 </h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "51315f0c",
+   "metadata": {},
+   "source": [
+    "<h4>Encryption is the process of hiding the meaning of a text by substituting letters in themessage with other letters, according to some system. If the process is successful, noone but the intended recipient can understand the encrypted message. Cryptanalysisrefers to attempts to undo the encryption, even if some details of the encryption areunknown (for example, if an encrypted message has been intercepted). The first stepof cryptanalysis is often to build up a table of letter frequencies in the encrypted text.  \n",
+    "  \n",
+    "Assume that the string letters is already defined as'abcdefghijklmnopqrstuvwxyz'. Write a function called frequencies()\n",
+    "that takes a string as its only parameter, and returns a list of integers, showing the\n",
+    "number of times each character appears in the text.  \n",
+    "Your function may ignore any characters that are not in letters.  \n",
+    "  \n",
+    ".>>> frequencies('The quick red fox got bored and went home.')  \n",
+    "[1, 1, 1, 3, 5, 1, 1, 2, 1, 0, 1, 0, 1, 2, 4, 0, 1, 2, 0, 2,\n",
+    "1, 0, 1, 1, 0, 0]\n",
+    "  \n",
+    ".>>> frequencies('apple') </h4>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "da8017f7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def frequencies(string):\n",
+    "    frequenceList = [0]*26 # declare a variable\n",
+    "    alphas = 'abcdefghijklmnopqrstuvwxyz'\n",
+    "    for char in string:\n",
+    "        if char in alphas:\n",
+    "            pos = alphas.index(char)\n",
+    "            frequenceList[pos] +=1\n",
+    "    return frequenceList"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "187789d3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 1, 1, 3, 5, 1, 1, 2, 1, 0, 1, 0, 1, 2, 4, 0, 1, 2, 0, 2, 1, 0, 1, 1, 0, 0]"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "frequencies(\"The quick red fox got bored and went home.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "b6382750",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "frequencies(\"apple\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
